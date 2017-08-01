@@ -7,7 +7,7 @@ using Xunit;
 
 namespace Autofac.Integration.AspNetCore.Test
 {
-    public class WebHostBuilderExtensionsTests
+    public class AutofacWebHostBuilderExtensionsTests
     {
         [Fact]
         public void UseAutofacAddsFactoryProviderToServiceCollection()
