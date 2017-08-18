@@ -26,8 +26,6 @@
 using System;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
-using Autofac.Integration.AspNetCore;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Microsoft.AspNetCore.Hosting
@@ -46,23 +44,6 @@ namespace Microsoft.AspNetCore.Hosting
         public static IWebHostBuilder UseAutofac(this IWebHostBuilder builder, Action<ContainerBuilder> configurationAction = null)
         {
             return builder.ConfigureServices(services => services.AddAutofac(configurationAction));
-        }
-
-        /// <summary>
-        /// Adds the Autofac-specific request services middleware, which ensures request lifetimes come from the root container.
-        /// Helpful when working with multitenancy to ensure proper tenant identification occurs.
-        /// </summary>
-        /// <param name="builder">The <see cref="IWebHostBuilder"/> instance being configured.</param>
-        /// <param name="rootScopeAccessor">A function that will access the application container / root lifetime scope from which request lifetimes should be generated.</param>
-        /// <returns>The existing <see cref="IWebHostBuilder"/> instance.</returns>
-        public static IWebHostBuilder UseAutofacRequestServices(this IWebHostBuilder builder, Func<ILifetimeScope> rootScopeAccessor)
-        {
-            var descriptor = new ServiceDescriptor(typeof(IStartupFilter), sp => new AutofacRequestServicesStartupFilter(rootScopeAccessor), ServiceLifetime.Transient);
-            return builder.ConfigureServices(services =>
-            {
-                services.Insert(0, descriptor);
-                services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            });
         }
     }
 }
