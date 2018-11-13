@@ -6,9 +6,9 @@ ASP.NET Core support and helpers for Autofac.
 
 ## Get Packages
 
-You can get started with `Autofac.AspNetCore` by [grabbing the latest NuGet package](https://www.nuget.org/packages/Autofac.AspNetCore).
+**This package is not officially published yet.** 
 
-If you're feeling adventurous, [continuous integration builds are on MyGet](https://www.myget.org/gallery/autofac).
+If you're feeling adventurous, [continuous integration builds are on MyGet](https://www.myget.org/gallery/autofac). As it is currently very small there is no value in publishing it yet. It may never be published. **YOU HAVE BEEN WARNED.**
 
 ## Get Help
 
