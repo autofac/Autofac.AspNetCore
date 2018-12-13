@@ -6,13 +6,13 @@ ASP.NET Core support and helpers for Autofac.
 
 ## Get Packages
 
-**This package is not officially published yet.** 
+**This package is not officially published yet.**
 
 If you're feeling adventurous, [continuous integration builds are on MyGet](https://www.myget.org/gallery/autofac). As it is currently very small there is no value in publishing it yet. It may never be published. **YOU HAVE BEEN WARNED.**
 
 ## Get Help
 
-**Need help with Autofac?** We have [a documentation site](http://autofac.readthedocs.io/) as well as [API documentation](http://autofac.org/apidoc/). We're ready to answer your questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/autofac) or check out the [discussion forum](https://groups.google.com/forum/#forum/autofac).
+**Need help with Autofac?** We have [a documentation site](https://autofac.readthedocs.io/) as well as [API documentation](https://autofac.org/apidoc/). We're ready to answer your questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/autofac) or check out the [discussion forum](https://groups.google.com/forum/#forum/autofac).
 
 ## Get Started
 
@@ -32,14 +32,14 @@ var host = new WebHostBuilder()
 host.Run();
 ```
 
-Our [ASP.NET Core](http://docs.autofac.org/en/latest/integration/aspnetcore.html) integration documentation contains more information about using Autofac with ASP.NET Core.
+Our [ASP.NET Core](https://autofac.readthedocs.io/en/latest/integration/aspnetcore.html) integration documentation contains more information about using Autofac with ASP.NET Core.
 
 ## Project
 
-Autofac is licensed under the MIT license, so you can comfortably use it in commercial applications (we still love [contributions](http://autofac.readthedocs.io/en/latest/contributors.html) though).
+Autofac is licensed under the MIT license, so you can comfortably use it in commercial applications (we still love [contributions](https://autofac.readthedocs.io/en/latest/contributors.html) though).
 
 ## Contributing / Pull Requests
 
 Refer to the [Readme for Autofac Developers](https://github.com/autofac/Autofac/blob/master/developers.md)
-for setting up and building Autofac source. We also have a [contributors guide](http://autofac.readthedocs.io/en/latest/contributors.html) to help you get started.
+for setting up and building Autofac source. We also have a [contributors guide](https://autofac.readthedocs.io/en/latest/contributors.html) to help you get started.
 
