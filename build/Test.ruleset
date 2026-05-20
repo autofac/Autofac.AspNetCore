@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="Autofac Analyzer Rules" Description="Analyzer rules for Autofac test assemblies." ToolsVersion="16.0">
+  <IncludeAll Action="Warning" />
+  <Rules AnalyzerId="Microsoft.Usage" RuleNamespace="Microsoft.Usage">
+    <Rule Id="CA1005" Action="Warning" />
+    <Rule Id="CA1031" Action="None" />
+    <Rule Id="CA1032" Action="None" />
+    <Rule Id="CA1040" Action="None" />
+    <Rule Id="CA1303" Action="None" />
+    <Rule Id="CA1501" Action="Warning" />
+    <Rule Id="CA1502" Action="Warning" />
+    <Rule Id="CA1505" Action="Warning" />
+    <Rule Id="CA1506" Action="Warning" />
+    <Rule Id="CA1510" Action="None" />
+    <Rule Id="CA1515" Action="None" />
+    <Rule Id="CA1707" Action="None" />
+    <Rule Id="CA1716" Action="None" />
+    <Rule Id="CA1812" Action="None" />
+    <Rule Id="CA1816" Action="None" />
+    <Rule Id="CA1822" Action="None" />
+    <Rule Id="CA1852" Action="None" />
+    <Rule Id="CA1861" Action="None" />
+    <Rule Id="CA1863" Action="None" />
+    <Rule Id="CA2007" Action="None" />
+    <Rule Id="CA2229" Action="None" />
+    <Rule Id="CA2234" Action="None" />
+    <Rule Id="CA2237" Action="None" />
+    <Rule Id="CA2263" Action="None" />
+  </Rules>
+  <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
+    <Rule Id="SA1101" Action="None" />
+    <Rule Id="SA1121" Action="None" />
+    <Rule Id="SA1122" Action="None" />
+    <Rule Id="SA1201" Action="None" />
+    <Rule Id="SA1202" Action="None" />
+    <Rule Id="SA1204" Action="None" />
+    <Rule Id="SA1309" Action="None" />
+    <Rule Id="SA1600" Action="None" />
+    <Rule Id="SA1601" Action="None" />
+    <Rule Id="SA1602" Action="None" />
+    <Rule Id="SA1611" Action="None" />
+    <Rule Id="SA1612" Action="None" />
+    <Rule Id="SA1615" Action="None" />
+    <Rule Id="SA1618" Action="None" />
+    <Rule Id="SA1625" Action="None" />
+    <Rule Id="SA1633" Action="None" />
+    <Rule Id="IDE0051" Action="None" />
+    <Rule Id="IDE0052" Action="None" />
+    <Rule Id="IDE0060" Action="None" />
+  </Rules>
+</RuleSet>

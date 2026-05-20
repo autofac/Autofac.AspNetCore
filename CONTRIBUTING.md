@@ -39,7 +39,7 @@ Autofac and the associated integration libraries follow the [Gitflow workflow pr
 
 ### Dependencies
 
-The core Autofac assemblies depend _only_ on the .NET Base Class Libraries (BCL). `Autofac.dll` proper is a Portable Class Library so only depends on a subset of that BCL functionality. This is a conscious decision to keep the project lightweight and easier to maintain.
+The core Autofac assemblies depend *only* on the .NET Base Class Libraries (BCL). `Autofac.dll` proper is a Portable Class Library so only depends on a subset of that BCL functionality. This is a conscious decision to keep the project lightweight and easier to maintain.
 
 For core integration assemblies (`Autofac.Integration.*`) the latest version of Autofac relies on the latest version of the integration target. For example, `Autofac.Integration.Mvc` always relies on the latest ASP.NET MVC libraries. This also helps keep the project easier to maintain.
 
