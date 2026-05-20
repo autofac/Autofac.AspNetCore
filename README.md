@@ -2,7 +2,7 @@
 
 ASP.NET Core support and helpers for Autofac.
 
-[![Build status](https://ci.appveyor.com/api/projects/status/qua467e2o7kvgqqa/branch/develop?svg=true)](https://ci.appveyor.com/project/Autofac/autofac-aspnetcore/branch/develop)
+[![Build status](https://github.com/autofac/Autofac.AspNetCore/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/autofac/Autofac.AspNetCore/actions/workflows/ci.yml)
 
 ## Get Packages
 
@@ -22,12 +22,12 @@ The Autofac implementation of the `IServiceProviderFactory` [interface](https://
 
 ```C#
 var host = new WebHostBuilder()
-	.UseAutofac()
-	.UseKestrel()
-	.UseContentRoot(Directory.GetCurrentDirectory())
-	.UseIISIntegration()
-	.UseStartup<Startup>()
-	.Build();
+ .UseAutofac()
+ .UseKestrel()
+ .UseContentRoot(Directory.GetCurrentDirectory())
+ .UseIISIntegration()
+ .UseStartup<Startup>()
+ .Build();
 
 host.Run();
 ```
@@ -42,4 +42,3 @@ Autofac is licensed under the MIT license, so you can comfortably use it in comm
 
 Refer to the [Readme for Autofac Developers](https://github.com/autofac/Autofac/blob/master/developers.md)
 for setting up and building Autofac source. We also have a [contributors guide](https://autofac.readthedocs.io/en/latest/contributors.html) to help you get started.
-
