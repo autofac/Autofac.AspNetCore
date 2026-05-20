@@ -2,7 +2,7 @@
 
 ASP.NET Core support and helpers for Autofac.
 
-[![Build status](https://ci.appveyor.com/api/projects/status/qua467e2o7kvgqqa/branch/develop?svg=true)](https://ci.appveyor.com/project/Autofac/autofac-aspnetcore/branch/develop)
+[![Build status](https://github.com/autofac/Autofac.AspNetCore/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/autofac/Autofac.AspNetCore/actions/workflows/ci.yml)
 
 ## Get Packages
 
