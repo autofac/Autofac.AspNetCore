@@ -2,7 +2,7 @@
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-using Moq;
+using NSubstitute;
 using Xunit;
 
 namespace Autofac.Integration.AspNetCore.Test
@@ -12,13 +12,12 @@ namespace Autofac.Integration.AspNetCore.Test
         [Fact]
         public void UseAutofacAddsFactoryProviderToServiceCollection()
         {
-            var webHostBuilder = new Mock<IWebHostBuilder>();
+            var webHostBuilder = Substitute.For<IWebHostBuilder>();
 
             Action<IServiceCollection> serviceAction = null;
-            webHostBuilder.Setup(x => x.ConfigureServices(It.IsAny<Action<IServiceCollection>>()))
-                .Callback<Action<IServiceCollection>>(s => serviceAction = s);
+            webHostBuilder.ConfigureServices(Arg.Do<Action<IServiceCollection>>(s => serviceAction = s));
 
-            webHostBuilder.Object.UseAutofac(b => b.RegisterInstance("Foo"));
+            webHostBuilder.UseAutofac(b => b.RegisterInstance("Foo"));
 
             var services = new ServiceCollection();
             serviceAction(services);
