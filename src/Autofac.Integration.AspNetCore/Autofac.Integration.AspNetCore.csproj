@@ -1,36 +1,55 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <Description>Autofac extensions and helpers for ASP.NET Core.</Description>
-    <TargetFramework>netstandard1.3</TargetFramework>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!-- Assembly metadata -->
     <AssemblyName>Autofac.Integration.AspNetCore</AssemblyName>
+    <AssemblyTitle>Autofac.AspNetCore</AssemblyTitle>
+    <Description>Autofac extensions and helpers for ASP.NET Core.</Description>
+    <Copyright>Copyright © 2015 Autofac Contributors</Copyright>
+    <Authors>Autofac Contributors</Authors>
+    <Company>Autofac</Company>
+    <Product>Autofac</Product>
     <AssemblyOriginatorKeyFile>../../Autofac.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
-    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <!-- Frameworks and language features -->
+    <TargetFrameworks>net10.0;net8.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <CodeAnalysisRuleSet>../../build/Source.ruleset</CodeAnalysisRuleSet>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Packaging -->
     <PackageId>Autofac.AspNetCore</PackageId>
     <PackageTags>autofac;di;ioc;dependencyinjection;aspnet;aspnetcore</PackageTags>
     <PackageReleaseNotes>Release notes are at https://github.com/autofac/Autofac.AspNetCore/releases</PackageReleaseNotes>
     <PackageIcon>icon.png</PackageIcon>
     <PackageProjectUrl>https://autofac.org</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/autofac/Autofac.AspNetCore</RepositoryUrl>
-    <CodeAnalysisRuleSet>../../build/Source.ruleset</CodeAnalysisRuleSet>
-    <Features>IOperation</Features>
+    <ContinuousIntegrationBuild Condition="'$(CI)' != '' ">true</ContinuousIntegrationBuild>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedAllSources>true</EmbedAllSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <!-- OmniSharp/VS Code resource generation -->
+    <CoreCompileDependsOn>PrepareResources;$(CompileDependsOn)</CoreCompileDependsOn>
   </PropertyGroup>
-
   <ItemGroup>
     <None Include="..\..\build\icon.png" Pack="true" PackagePath="\" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
-
   <ItemGroup>
-    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.1.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="1.1.0" />
+    <AdditionalFiles Include="..\..\build\stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.3.10" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.556">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
   </ItemGroup>
-
 </Project>
