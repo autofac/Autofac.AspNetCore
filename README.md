@@ -2,17 +2,18 @@
 
 ASP.NET Core support and helpers for Autofac.
 
-[![Build status](https://github.com/autofac/Autofac.AspNetCore/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/autofac/Autofac.AspNetCore/actions/workflows/ci.yml)
+[![Build status](https://github.com/autofac/Autofac.AspNetCore/actions/workflows/main.yml/badge.svg)](https://github.com/autofac/Autofac.AspNetCore/actions/workflows/main.yml) [![codecov](https://codecov.io/gh/Autofac/Autofac.AspNetCore/branch/develop/graph/badge.svg)](https://codecov.io/gh/Autofac/Autofac.AspNetCore)
 
-## Get Packages
+Please file issues and pull requests for this package [in this repository](https://github.com/autofac/Autofac.AspNetCore/issues) rather than in the Autofac core repo.
+
+- [Contributing](https://autofac.readthedocs.io/en/latest/contributors.html)
+- [Open in Visual Studio Code](https://open.vscode.dev/autofac/Autofac.AspNetCore)
+
+## Quick Start
 
 **This package is not officially published yet.**
 
 If you're feeling adventurous, [continuous integration builds are on MyGet](https://www.myget.org/gallery/autofac). As it is currently very small there is no value in publishing it yet. It may never be published. **YOU HAVE BEEN WARNED.**
-
-## Get Help
-
-**Need help with Autofac?** We have [a documentation site](https://autofac.readthedocs.io/) as well as [API documentation](https://autofac.org/apidoc/). We're ready to answer your questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/autofac) or check out the [discussion forum](https://groups.google.com/forum/#forum/autofac).
 
 ## Get Started
 
@@ -34,11 +35,6 @@ host.Run();
 
 Our [ASP.NET Core](https://autofac.readthedocs.io/en/latest/integration/aspnetcore.html) integration documentation contains more information about using Autofac with ASP.NET Core.
 
-## Project
+## Get Help
 
-Autofac is licensed under the MIT license, so you can comfortably use it in commercial applications (we still love [contributions](https://autofac.readthedocs.io/en/latest/contributors.html) though).
-
-## Contributing / Pull Requests
-
-Refer to the [Readme for Autofac Developers](https://github.com/autofac/Autofac/blob/master/developers.md)
-for setting up and building Autofac source. We also have a [contributors guide](https://autofac.readthedocs.io/en/latest/contributors.html) to help you get started.
+**Need help with Autofac?** We have [a documentation site](https://autofac.readthedocs.io/) as well as [API documentation](https://autofac.org/apidoc/). We're ready to answer your questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/autofac) or check out the [discussion forum](https://groups.google.com/forum/#forum/autofac).

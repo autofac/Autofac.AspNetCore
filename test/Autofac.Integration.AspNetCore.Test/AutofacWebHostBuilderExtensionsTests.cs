@@ -1,15 +1,12 @@
-﻿// <copyright file="AutofacWebHostBuilderExtensionsTests.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
+﻿// Copyright (c) Autofac Project. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
 
-namespace Autofac.Integration.AspNetCore.Test;
-
-using System;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using NSubstitute;
-using Xunit;
+
+namespace Autofac.Integration.AspNetCore.Test;
 
 public class AutofacWebHostBuilderExtensionsTests
 {
@@ -18,13 +15,13 @@ public class AutofacWebHostBuilderExtensionsTests
     {
         var webHostBuilder = Substitute.For<IWebHostBuilder>();
 
-        Action<IServiceCollection> serviceAction = null;
+        Action<IServiceCollection>? serviceAction = null;
         webHostBuilder.ConfigureServices(Arg.Do<Action<IServiceCollection>>(s => serviceAction = s));
 
         webHostBuilder.UseAutofac(b => b.RegisterInstance("Foo"));
 
         var services = new ServiceCollection();
-        serviceAction(services);
+        serviceAction?.Invoke(services);
 
         var serviceProvider = services.BuildServiceProvider();
         var factory = serviceProvider.GetService<IServiceProviderFactory<ContainerBuilder>>();
